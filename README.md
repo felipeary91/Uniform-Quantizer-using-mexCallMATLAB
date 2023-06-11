@@ -10,8 +10,8 @@ From the quantizer equation it can be inferred that most of the times quantizati
 
 In this implementation, a sine signal is simulated and then quantized using the equation above. The quantization error, difference between $m(t) - m_q(t)$, is computed as well. mexCallMATLAB is used to call MATLAB functions and plot the results.
 
-The MEX function can be created by using the command: <br />
+A MEX function can be created by using the command: <br />
 `mex -R2018a Quantizer_using_mexCallMATLAB.c`
 
-the function takes only one argument, which is the number of bits used by the quantizer: <br />
+this function takes no output and only one argument, which is the number of bits used by the quantizer: <br />
 `Quantizer_using_mexCallMATLAB(3)`
