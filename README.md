@@ -8,10 +8,10 @@ Q(n) = sign(a) * \Delta * \lfloor \frac{|a|}{\Delta} + \frac{1}{2} \rfloor
 
 From the quantizer equation it can be inferred that most of the times quantization simply means to round off or truncate an analog value. This implementation corresponds to a uniform quantizer, which has a quantization step size $(Δ)$ that spaces the quantization levels equally.
 
-In this implementation, a sine signal is simulated and then quantized using the equation above. The quantization error, difference between $m(t) - m_q(t)$, is computed as well. mexCallMATLAB is used to call MATLAB functions and plot the results.
+In this implementation mexCallMATLAB is used, a sine signal is simulated by calling the MATLAB command $sin()$, and then quantized using the equation above. The quantization error, difference between $m(t) - m_q(t)$, is computed as well.  Finally, the results are plotted using the MATLAB command $plot()$.
 
 A MEX function can be created by using the command: <br />
 `mex -R2018a Quantizer_using_mexCallMATLAB.c`
 
-this function takes no output and only one argument, which is the number of bits used by the quantizer: <br />
+This function needs no output and takes only one argument, which is the number of bits used by the quantizer: <br />
 `Quantizer_using_mexCallMATLAB(3)`
